@@ -1,0 +1,44 @@
+.section.grey.portfolio
+	
+	.titulo
+		h2 PORTFOLIO
+		
+	//- .portfolio__ctrls-cont
+	//- 	a.btn-portfolio(href="#") branding
+	//- 	a.btn-portfolio(href="#") editorial
+	//- 	a.btn-portfolio(href="#") web
+		
+	.portfolio__content-cont
+		
+		.portfolio__item-orange.title
+			span web
+
+		.portfolio__item-orange(v-for="item in items.web")
+			a(href="#" :l-box="'#' + item.id").portfolio__link
+				img.portfolio__img(:src="item.thumb_src", alt="")
+			.item-hover
+				span {{item.name}} <br> {{item.description}}
+				
+
+
+		.portfolio__item-blue.title
+			span brand
+
+		.portfolio__item-blue(v-for="item in items.branding")
+			a(href="#" :l-box="'#' + item.id").portfolio__link
+				img.portfolio__img(:src="item.thumb_src", alt="")
+			.item-hover
+				span {{item.name}} <br> {{item.description}}
+	
+		
+
+
+		.portfolio__item-red.title
+			span print
+
+		.portfolio__item-red(v-for="item in items.print")
+			a(:href="item.link" target="_blank").portfolio__link
+				img.portfolio__img(:src="item.thumb_src", alt="")
+			.item-hover
+				span {{item.name}} <br> {{item.description}}
+

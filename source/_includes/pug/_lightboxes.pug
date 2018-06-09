@@ -1,0 +1,17 @@
+.lightboxes
+
+
+	//- WEB
+	.imagen-portafolio-container(v-for="item in items.web" :id="item.id")
+		.imagen-portafolio
+			img(:src="item.img_src", alt="")
+		.imagen-footer
+			a(:href="item.link" target="_blank").btn-website launch website
+	
+
+	//- BRAND
+
+	.imagen-portafolio-container(v-for="item in items.branding" :id="item.id")
+		.imagen-portafolio
+			img(:src="item.img_src", alt="")
+
