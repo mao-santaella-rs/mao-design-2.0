@@ -72,7 +72,7 @@ gulp.task('vue', done => {
 			transform: ['vueify', 'babelify', 'aliasify'] }))
 
 		// COMPRIME EL JAVASCRIPT
-		.pipe(uglify())
+		// .pipe(uglify())
 
 		.pipe(gulp.dest(carpeta.vue.pub))
 
