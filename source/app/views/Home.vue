@@ -3,7 +3,7 @@
 	#home
 		vheader(v-if='datos', :datos='datos.header')
 
-		vportfolio(v-if='datos.portfolio', :datos='datos.portfolio')
+		vportfolio(v-if='datos.portfolio')
 
 		vabout(v-if='datos.about', :datos='datos.about')
 
@@ -51,6 +51,8 @@ export default {
 					dbObject[doc.id] = doc.data()
 				})
 				app.datos = dbObject
+				console.log(dbObject);
+				
 			})
 		}
 	},
