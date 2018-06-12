@@ -4,10 +4,11 @@
         .header__logo-cont
             .header__logo__bubble
                 span(v-if='datos.greetings') {{datos.greetings[greetingRndm(datos.greetings)]}}
-            img(:src='datos.logo', alt='')
+            img.header__logo-img(:src='datos.logo', alt='')
         .header__content
             span.nombre {{datos.name}}
-            span(v-html='datos.under_name')
+            span {{datos.under_line_l1}}
+            span {{datos.under_line_l2}}
 
 </template>
 

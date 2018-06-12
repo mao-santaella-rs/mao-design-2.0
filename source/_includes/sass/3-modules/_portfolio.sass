@@ -16,6 +16,7 @@
 		text-align: center
 		position: relative
 		border: none
+		pointer-events: none
 		span
 			font-family: $heading-font-family
 			font-weight: $heading-font-weight
@@ -105,6 +106,7 @@
 	display: flex
 	align-items: center
 	justify-content: center
+	flex-direction: column
 	height: 70px
 	width: 100%
 	padding: 10px
@@ -129,6 +131,8 @@
 
 	span
 		line-height: 1.4em
+		&:first-child
+			font-weight: $base-bold-font-weight
 
 
 

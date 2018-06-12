@@ -13,18 +13,14 @@
 		footer.red.footer(v-if='datos.header')
 			span {{datos.header.name}} {{new Date().getFullYear()}}
 
-		vligthboxes(v-if='datos.portfolio', :datos='datos.portfolio')
-
 </template>
 
 <script>
-
-import db           from '../firebase/init'
 // import axios     from 'axios'
-import vheader      from '../components/Header.vue'
-import vportfolio 	from '../components/Portfolio.vue'
-import vabout       from '../components/About.vue'
-import vligthboxes  from '../components/Ligthboxes.vue'
+import db from '../firebase/init'
+import vheader from '../components/Header.vue'
+import vportfolio from '../components/Portfolio.vue'
+import vabout from '../components/About.vue'
 
 export default {
 	name: 'home',
@@ -32,8 +28,7 @@ export default {
 	components: {
 		vheader,
 		vportfolio,
-		vabout,
-		vligthboxes
+		vabout
 	},
 
 	data(){

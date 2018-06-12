@@ -5,7 +5,38 @@
 	+auto-height
 
 .btn-website
-	float: right
+
+.imagen-portafolio-container
+	max-width: 650px 
+
+// ---------------------------------------------------------------
+
+.modal
+	+position(fixed,0 0 0 0)
+	z-index: 50000
+
+.modal-black-bg
+	+position(absolute,0 0 0 0)
+	background-color: $black
+	opacity: 0.7
+
+.modal__window
+	margin: 5% auto
+	position: relative
+	max-width: 650px
+	background-color: $white
+
+.modal__image
+	img
+.modal__foot
+	padding: 15px
+	display: flex
+	justify-content: space-between
+.modal__description
+
+.modal__action
+
+.btn-modal
 	text-transform: uppercase
 	padding: 5px 10px
 	background-color: $color-naranja
@@ -17,5 +48,26 @@
 		padding: 10px 15px
 		margin: 0
 
-.imagen-portafolio-container
-	max-width: 650px 
+.modal-enter-active, .modal-leave-active
+	transition: opacity 0.25s ease-out
+
+.modal-enter, .modal-leave-to
+	opacity: 0
+
+.modal__close
+	display: block
+	+size(30px)
+	+position(absolute, 5px 5px null null)
+	border-radius: 20%
+	background-color: rgba(255,255,255,0.5)
+	&:before, &:after
+		content: ""
+		display: block
+		width: 80%
+		height: 2px
+		background-color: $darken-gray
+		+position(absolute,50% null null 50%)
+	&:before
+		transform: translate(-50%,-50%) rotate(45deg)
+	&:after
+		transform: translate(-50%,-50%) rotate(-45deg)

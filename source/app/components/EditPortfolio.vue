@@ -55,8 +55,7 @@
                         p.card-text <b>Description:</b><br>{{item.description}}
                         p.card-text <b>Id:</b> {{item.id}}
                         p.card-text(v-if="item.link") <b>Link:</b><br>
-                            small {{item.link}}
-                            
+                            small {{item.link}}   
 </template>
 
 <script>
